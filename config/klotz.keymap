@@ -116,6 +116,13 @@
 
     };
 
+     tds: tap_dance_shift {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mt RSHIFT RET>, <&caps_word>;
+    };
+
     macros {
     };
 
@@ -128,7 +135,7 @@
     &kp Q       &kp W       &kp E       &kp R       &kp T        &kp Y       &kp U       &kp I       &kp O       &kp P
     &mt LGUI A  &mt LALT S  &mt LCTRL D &mt LSHFT F &kp G        &kp H       &mt RSHFT J &mt RCTRL K &mt RALT L  &mt RGUI SEMI
     &kp Z       &kp X       &kp C       &kp V       &kp B        &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH
-                          &lt LNUM SPACE    &mt LCTRL TAB        &mt RSHIFT RET    &lt LSYM BSPC    
+                          &lt LNUM SPACE    &mt LCTRL TAB        &tds    &lt LSYM BSPC    
                 >;
                 sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
             };
