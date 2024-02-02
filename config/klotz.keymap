@@ -130,13 +130,6 @@
             bindings = <&sys_reset>, <&bootloader>;
     };
 
-    td_reset_r: tap_dance_reset_right {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&sys_reset>, <&bootloader>;
-    };
-
     macros {
     };
 
@@ -173,7 +166,7 @@
     &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT        &kp CARET  &kp AMPS   &kp STAR  &kp LPAR  &kp RPAR
     &none     &none   &none     &kp SQT   &kp GRAVE        &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT  &kp BSLH
     &none     &none   &none     &kp DQT   &kp TILDE        &kp UNDER  &kp PLUS   &kp LBRC  &kp RBRC  &kp PIPE
-                                &lt LSET DEL  &none        &td_reset_r  &none
+                                &lt LSET DEL  &none        &sys_reset  &none
                 >;
                 sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
             };
