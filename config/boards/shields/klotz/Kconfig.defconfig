@@ -5,6 +5,9 @@ if SHIELD_KLOTZ_LEFT
 
     config ZMK_SPLIT_BLE_ROLE_CENTRAL
         default y
+    
+    config BT_CTLR_PHY_2M
+        default n
 
 endif # LEFT
 
